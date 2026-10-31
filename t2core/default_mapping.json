@@ -1,0 +1,1144 @@
+{
+ "name": "Table 2 \u2013 Revenue by Object (Actual to date)",
+ "version": 1,
+ "source": "June_2025-26 (T01 to T03) workbook, sheet Table-2(2QTR), column E formulas",
+ "matching": "A CFR code belongs to a line when it STARTS WITH any pattern of that line (same result as the workbook's \"*code*\" SUMIF wildcards).",
+ "sign": "CFR receipts are negative; Actual = -(sum of CFR amounts).",
+ "exclusions": [
+  {
+   "pattern": "E012",
+   "reason": "Recoveries of investment (provincial/others) \u2013 excluded in source Table-2"
+  },
+  {
+   "pattern": "E032",
+   "reason": "Cash credit accommodation \u2013 excluded in source Table-2"
+  }
+ ],
+ "lines": [
+  {
+   "id": "r5",
+   "code": "",
+   "label": "TOTAL REVENUE (A=B+C)",
+   "level": 0,
+   "source_row": 5,
+   "type": "total",
+   "children": [
+    "r6",
+    "r18",
+    "r68"
+   ]
+  },
+  {
+   "id": "r6",
+   "code": "",
+   "label": "FEDERAL TRANSFER (B)",
+   "level": 1,
+   "source_row": 6,
+   "type": "total",
+   "children": [
+    "r7",
+    "r10",
+    "r15"
+   ]
+  },
+  {
+   "id": "r7",
+   "code": "B01",
+   "label": "B01-DIRECT TAXES",
+   "level": 2,
+   "source_row": 7,
+   "type": "total",
+   "children": [
+    "r8",
+    "r9"
+   ]
+  },
+  {
+   "id": "r8",
+   "code": "B011",
+   "label": "B011-TAXES ON INCOME",
+   "level": 3,
+   "source_row": 8,
+   "type": "detail",
+   "patterns": [
+    "B01108"
+   ]
+  },
+  {
+   "id": "r9",
+   "code": "B017",
+   "label": "B017-CAPITAL VALUE TAX ON IMMOVEABLE PROPERTY",
+   "level": 3,
+   "source_row": 9,
+   "type": "detail",
+   "patterns": [
+    "B01709"
+   ]
+  },
+  {
+   "id": "r10",
+   "code": "B02",
+   "label": "B02-INDIRECT TAXES",
+   "level": 2,
+   "source_row": 10,
+   "type": "total",
+   "children": [
+    "r11",
+    "r12",
+    "r13",
+    "r14"
+   ]
+  },
+  {
+   "id": "r11",
+   "code": "B020",
+   "label": "B020-SEA CUSTOMS",
+   "level": 3,
+   "source_row": 11,
+   "type": "detail",
+   "patterns": [
+    "B02070"
+   ]
+  },
+  {
+   "id": "r12",
+   "code": "B023",
+   "label": "B023-SALES TAX",
+   "level": 3,
+   "source_row": 12,
+   "type": "detail",
+   "patterns": [
+    "B02303"
+   ]
+  },
+  {
+   "id": "r13",
+   "code": "B024",
+   "label": "B024-FEDERAL EXCISE",
+   "level": 3,
+   "source_row": 13,
+   "type": "detail",
+   "patterns": [
+    "B02408",
+    "B02487"
+   ]
+  },
+  {
+   "id": "r14",
+   "code": "B025",
+   "label": "B025-FEDERAL EXCISE ON NATURAL GAS",
+   "level": 3,
+   "source_row": 14,
+   "type": "detail",
+   "patterns": [
+    "B02503"
+   ]
+  },
+  {
+   "id": "r15",
+   "code": "C03",
+   "label": "C03-MISCELLANEOUS RECEIPTS",
+   "level": 2,
+   "source_row": 15,
+   "type": "total",
+   "children": [
+    "r16",
+    "r17"
+   ]
+  },
+  {
+   "id": "r16",
+   "code": "C036",
+   "label": "C036-GRANTS",
+   "level": 3,
+   "source_row": 16,
+   "type": "detail",
+   "patterns": [
+    "C03604"
+   ]
+  },
+  {
+   "id": "r17",
+   "code": "C039",
+   "label": "C039-DEVELOPMENT SURCHARGE AND ROYALTIES",
+   "level": 3,
+   "source_row": 17,
+   "type": "detail",
+   "patterns": [
+    "C03907",
+    "C03908",
+    "C03904",
+    "C03915",
+    "C03922"
+   ]
+  },
+  {
+   "id": "r18",
+   "code": "",
+   "label": "PROVINCIAL REVENUE (C )",
+   "level": 1,
+   "source_row": 18,
+   "type": "total",
+   "children": [
+    "r19",
+    "r27",
+    "r33",
+    "r35",
+    "r43",
+    "r54"
+   ]
+  },
+  {
+   "id": "r19",
+   "code": "B01",
+   "label": "B01-DIRECT TAXES",
+   "level": 2,
+   "source_row": 19,
+   "type": "total",
+   "children": [
+    "r20",
+    "r21",
+    "r22",
+    "r23",
+    "r24",
+    "r25",
+    "r26"
+   ]
+  },
+  {
+   "id": "r20",
+   "code": "B011",
+   "label": "B011-TAXES ON INCOME",
+   "level": 3,
+   "source_row": 20,
+   "type": "detail",
+   "patterns": [
+    "B01130",
+    "B01131",
+    "B01132",
+    "B01173",
+    "B01176",
+    "B01178"
+   ]
+  },
+  {
+   "id": "r21",
+   "code": "B012",
+   "label": "B012-WEALTH TAX",
+   "level": 3,
+   "source_row": 21,
+   "type": "detail",
+   "patterns": [
+    "B012"
+   ]
+  },
+  {
+   "id": "r22",
+   "code": "B013",
+   "label": "B013-PROPERTY TAX",
+   "level": 3,
+   "source_row": 22,
+   "type": "detail",
+   "patterns": [
+    "B01311",
+    "B01301",
+    "B01310",
+    "B01312",
+    "B01320"
+   ]
+  },
+  {
+   "id": "r23",
+   "code": "B014",
+   "label": "B014-LAND REVENUE",
+   "level": 3,
+   "source_row": 23,
+   "type": "detail",
+   "patterns": [
+    "B014"
+   ]
+  },
+  {
+   "id": "r24",
+   "code": "B015",
+   "label": "B015-WORKERS WELFARE TAX",
+   "level": 3,
+   "source_row": 24,
+   "type": "detail",
+   "patterns": [
+    "B015"
+   ]
+  },
+  {
+   "id": "r25",
+   "code": "B016",
+   "label": "B016-TAX ON PROFESSION, TRADES AND CALLINGS",
+   "level": 3,
+   "source_row": 25,
+   "type": "detail",
+   "patterns": [
+    "B016"
+   ]
+  },
+  {
+   "id": "r26",
+   "code": "B017",
+   "label": "B017-CAPITAL VALUE TAX ON IMMOVEABLE PROPERTY",
+   "level": 3,
+   "source_row": 26,
+   "type": "detail",
+   "patterns": [
+    "B01701",
+    "B01704",
+    "B01706",
+    "B01710"
+   ]
+  },
+  {
+   "id": "r27",
+   "code": "B02",
+   "label": "B02-INDIRECT TAXES",
+   "level": 2,
+   "source_row": 27,
+   "type": "total",
+   "children": [
+    "r28",
+    "r29",
+    "r30",
+    "r31",
+    "r32"
+   ]
+  },
+  {
+   "id": "r28",
+   "code": "B021",
+   "label": "B021-LAND CUSTOMS",
+   "level": 3,
+   "source_row": 28,
+   "type": "detail",
+   "patterns": [
+    "B021"
+   ],
+   "note": "Workbook had a typed 0 here; pattern B021 added so any future Land Customs code is captured."
+  },
+  {
+   "id": "r29",
+   "code": "B023",
+   "label": "B023-SALES TAX",
+   "level": 3,
+   "source_row": 29,
+   "type": "detail",
+   "patterns": [
+    "B02341",
+    "B02367",
+    "B02384",
+    "B02301",
+    "B02317",
+    "B02331",
+    "B02383"
+   ]
+  },
+  {
+   "id": "r30",
+   "code": "B026",
+   "label": "B026-PROVINCIAL EXCISE",
+   "level": 3,
+   "source_row": 30,
+   "type": "detail",
+   "patterns": [
+    "B02601",
+    "B02602",
+    "B02603",
+    "B02610",
+    "B02611",
+    "B02612",
+    "B02613",
+    "B02620",
+    "B02621",
+    "B02622",
+    "B02623",
+    "B02625",
+    "B02628",
+    "B02624",
+    "B02626"
+   ]
+  },
+  {
+   "id": "r31",
+   "code": "B027",
+   "label": "B027-STAMP DUTY",
+   "level": 3,
+   "source_row": 31,
+   "type": "detail",
+   "patterns": [
+    "B027"
+   ]
+  },
+  {
+   "id": "r32",
+   "code": "B028",
+   "label": "B028-MOTOR VEHICLES",
+   "level": 3,
+   "source_row": 32,
+   "type": "detail",
+   "patterns": [
+    "B0280",
+    "B0281",
+    "B02904"
+   ]
+  },
+  {
+   "id": "r33",
+   "code": "B03",
+   "label": "B03-INDIRECT TAXES",
+   "level": 2,
+   "source_row": 33,
+   "type": "total",
+   "children": [
+    "r34"
+   ]
+  },
+  {
+   "id": "r34",
+   "code": "B030",
+   "label": "B030-OTHER INDIRECT TAXES",
+   "level": 3,
+   "source_row": 34,
+   "type": "detail",
+   "patterns": [
+    "B03001",
+    "B03002",
+    "B03004",
+    "B03020",
+    "B03025",
+    "B03027",
+    "B03030",
+    "B03031",
+    "B03032",
+    "B03033",
+    "B03034",
+    "B03035",
+    "B03050",
+    "B03055",
+    "B03058",
+    "B03070",
+    "B03075",
+    "B03076",
+    "B03077",
+    "B03078"
+   ]
+  },
+  {
+   "id": "r35",
+   "code": "C01",
+   "label": "C01-INCOME FROM PROPERTY AND ENTERPRISE",
+   "level": 2,
+   "source_row": 35,
+   "type": "total",
+   "children": [
+    "r36",
+    "r37",
+    "r38",
+    "r39",
+    "r40",
+    "r41",
+    "r42"
+   ]
+  },
+  {
+   "id": "r36",
+   "code": "C010",
+   "label": "C010-PROFITS",
+   "level": 3,
+   "source_row": 36,
+   "type": "detail",
+   "patterns": [
+    "C01001",
+    "C01070"
+   ]
+  },
+  {
+   "id": "r37",
+   "code": "C012",
+   "label": "C012-INTEREST ON LOANS AND ADVANCES TO PROVIN",
+   "level": 3,
+   "source_row": 37,
+   "type": "detail",
+   "patterns": [
+    "C01202"
+   ]
+  },
+  {
+   "id": "r38",
+   "code": "C013",
+   "label": "C013-INTEREST ON LOANS TO DISTRICT GOVT. / TM",
+   "level": 3,
+   "source_row": 38,
+   "type": "detail",
+   "patterns": [
+    "C01311",
+    "C01312",
+    "C01319",
+    "C01321"
+   ]
+  },
+  {
+   "id": "r39",
+   "code": "C014",
+   "label": "C014-INTEREST ON LOANS & ADVANCES TO FIN. INS",
+   "level": 3,
+   "source_row": 39,
+   "type": "detail",
+   "patterns": [
+    "C01401",
+    "C01416"
+   ]
+  },
+  {
+   "id": "r40",
+   "code": "C016",
+   "label": "C016-INTEREST ON LOANS & ADVANCES TO GOVT. SE",
+   "level": 3,
+   "source_row": 40,
+   "type": "detail",
+   "patterns": [
+    "C01601"
+   ]
+  },
+  {
+   "id": "r41",
+   "code": "C018",
+   "label": "C018-INTEREST ON LOAN-OTHERS",
+   "level": 3,
+   "source_row": 41,
+   "type": "detail",
+   "patterns": [
+    "C01803",
+    "C01807"
+   ]
+  },
+  {
+   "id": "r42",
+   "code": "C019",
+   "label": "C019-DIVIDENDS",
+   "level": 3,
+   "source_row": 42,
+   "type": "detail",
+   "patterns": [
+    "C019"
+   ]
+  },
+  {
+   "id": "r43",
+   "code": "C02",
+   "label": "C02-RECEIPTS FROM CIVIL  AND OTHER FUNDS",
+   "level": 2,
+   "source_row": 43,
+   "type": "total",
+   "children": [
+    "r44",
+    "r45",
+    "r46",
+    "r47",
+    "r49",
+    "r50",
+    "r51",
+    "r52",
+    "r53"
+   ]
+  },
+  {
+   "id": "r44",
+   "code": "C021",
+   "label": "C021-GENERAL ADMN. RECEIPTS-ORGANS OF STATE",
+   "level": 3,
+   "source_row": 44,
+   "type": "detail",
+   "patterns": [
+    "C02101",
+    "C02102",
+    "C02103",
+    "C02104",
+    "C02107",
+    "C02110",
+    "C02113",
+    "C02115",
+    "C02116",
+    "C02120",
+    "C02122",
+    "C02123",
+    "C02124",
+    "C02126",
+    "C02155",
+    "C02119"
+   ]
+  },
+  {
+   "id": "r45",
+   "code": "C022",
+   "label": "C022-GENERAL ADMN. RECEIPTS-FISCAL ADMN.",
+   "level": 3,
+   "source_row": 45,
+   "type": "detail",
+   "patterns": [
+    "C02241",
+    "C02242",
+    "C02243",
+    "C02244",
+    "C02245",
+    "C02246",
+    "C02248",
+    "C02203",
+    "C02204",
+    "C02206",
+    "C02227",
+    "C02231"
+   ]
+  },
+  {
+   "id": "r46",
+   "code": "C023",
+   "label": "C023-GENERAL ADMN.RECEIPTS-RECEIPT ECO. REGUL",
+   "level": 3,
+   "source_row": 46,
+   "type": "detail",
+   "patterns": [
+    "C02301",
+    "C02302",
+    "C02306",
+    "C02309",
+    "C02308",
+    "C02370"
+   ]
+  },
+  {
+   "id": "r47",
+   "code": "C024",
+   "label": "C024-GENERAL ADMN.RECEIPTS-STATISTICS",
+   "level": 3,
+   "source_row": 47,
+   "type": "detail",
+   "patterns": [
+    "C02401",
+    "C02470"
+   ]
+  },
+  {
+   "id": "r49",
+   "code": "C025",
+   "label": "C025-DEFENCE SERVICES RECEIPTS",
+   "level": 3,
+   "source_row": 49,
+   "type": "detail",
+   "patterns": [
+    "C02501",
+    "C02513",
+    "C02514",
+    "C02520",
+    "C02523"
+   ]
+  },
+  {
+   "id": "r50",
+   "code": "C026",
+   "label": "C026-LAW & ORDERS RECEIPTS",
+   "level": 3,
+   "source_row": 50,
+   "type": "detail",
+   "patterns": [
+    "C02604",
+    "C02613",
+    "C02635",
+    "C02691",
+    "C02601",
+    "C02602",
+    "C02606",
+    "C02607",
+    "C02608",
+    "C02609",
+    "C02610",
+    "C02612",
+    "C02616",
+    "C02624",
+    "C02625",
+    "C02631",
+    "C02632",
+    "C02634",
+    "C02636",
+    "C02637",
+    "C02638",
+    "C02640",
+    "C02642",
+    "C02646",
+    "C02648",
+    "C02656",
+    "C02659",
+    "C02661",
+    "C02666",
+    "C02694"
+   ]
+  },
+  {
+   "id": "r51",
+   "code": "C027",
+   "label": "C027-COMMUNITY SERVICES RECEIPTS",
+   "level": 3,
+   "source_row": 51,
+   "type": "detail",
+   "patterns": [
+    "C02701",
+    "C02702",
+    "C02703",
+    "C02704",
+    "C02706",
+    "C02711",
+    "C02713",
+    "C02714",
+    "C02716",
+    "C02724",
+    "C02725",
+    "C02726",
+    "C02731",
+    "C02732",
+    "C02735",
+    "C02741",
+    "C02743"
+   ]
+  },
+  {
+   "id": "r52",
+   "code": "C028",
+   "label": "C028-SOCIAL SERVICES",
+   "level": 3,
+   "source_row": 52,
+   "type": "detail",
+   "patterns": [
+    "C02801",
+    "C02802",
+    "C02803",
+    "C02804",
+    "C02805",
+    "C02806",
+    "C02807",
+    "C02808",
+    "C02810",
+    "C02811",
+    "C02812",
+    "C02813",
+    "C02814",
+    "C02815",
+    "C02816",
+    "C02817",
+    "C02818",
+    "C02821",
+    "C02824",
+    "C02826",
+    "C02828",
+    "C02829",
+    "C02835",
+    "C02836",
+    "C02837",
+    "C02838",
+    "C02839",
+    "C02840",
+    "C02841",
+    "C02843",
+    "C02845",
+    "C02851",
+    "C02852",
+    "C02855",
+    "C02858",
+    "C02864",
+    "C02866",
+    "C02867",
+    "C02869",
+    "C02870",
+    "C02871",
+    "C02873",
+    "C02875"
+   ]
+  },
+  {
+   "id": "r53",
+   "code": "C029",
+   "label": "C029-SOCIAL SERVICES MISCELLANEOUS",
+   "level": 3,
+   "source_row": 53,
+   "type": "detail",
+   "patterns": [
+    "C02901",
+    "C02903",
+    "C02905",
+    "C02906",
+    "C02931",
+    "C02934",
+    "C02970"
+   ]
+  },
+  {
+   "id": "r54",
+   "code": "C03",
+   "label": "C03-MISCELLANEOUS RECEIPTS",
+   "level": 2,
+   "source_row": 54,
+   "type": "total",
+   "children": [
+    "r55",
+    "r56",
+    "r57",
+    "r58",
+    "r59",
+    "r65",
+    "r66",
+    "r67"
+   ]
+  },
+  {
+   "id": "r55",
+   "code": "C031",
+   "label": "C031-ECONOMIC SERVICES RECEIPTS FOOD & AGRICULTURE",
+   "level": 3,
+   "source_row": 55,
+   "type": "detail",
+   "patterns": [
+    "C03101",
+    "C03102",
+    "C03104",
+    "C03116",
+    "C03118",
+    "C03120",
+    "C03121",
+    "C03122",
+    "C03123",
+    "C03126",
+    "C03129",
+    "C03130",
+    "C03131",
+    "C03132",
+    "C03134",
+    "C03136",
+    "C03137",
+    "C03138",
+    "C03139",
+    "C03140",
+    "C03199"
+   ]
+  },
+  {
+   "id": "r56",
+   "code": "C032",
+   "label": "C032-ECO. SERVICE REC.FISHERIES,  ANIMAL HUSBA",
+   "level": 3,
+   "source_row": 56,
+   "type": "detail",
+   "patterns": [
+    "C03201",
+    "C03203",
+    "C03205",
+    "C03221",
+    "C03223",
+    "C03225",
+    "C03226",
+    "C03227",
+    "C03229",
+    "C03230",
+    "C03231"
+   ]
+  },
+  {
+   "id": "r57",
+   "code": "C033",
+   "label": "C033-ECONOMIC SERVICES RECEIPTS FOREST",
+   "level": 3,
+   "source_row": 57,
+   "type": "detail",
+   "patterns": [
+    "C03305",
+    "C03306",
+    "C03310",
+    "C03321",
+    "C03322",
+    "C03323",
+    "C03326",
+    "C03327",
+    "C03328",
+    "C03334",
+    "C03370"
+   ]
+  },
+  {
+   "id": "r58",
+   "code": "C034",
+   "label": "C034-ECO.SERVICES RECEIPTS COOPERATION, IRRIG, EMB",
+   "level": 3,
+   "source_row": 58,
+   "type": "detail",
+   "patterns": [
+    "C03463",
+    "C03480",
+    "C03481",
+    "C03401",
+    "C03406",
+    "C03431",
+    "C03432",
+    "C03433",
+    "C03434"
+   ]
+  },
+  {
+   "id": "r59",
+   "code": "C035",
+   "label": "C035-ECONOMIC SERVICES RECEIPTS - OTHERS",
+   "level": 3,
+   "source_row": 59,
+   "type": "detail",
+   "patterns": [
+    "C0350A",
+    "C03502",
+    "C03506",
+    "C03507",
+    "C03508",
+    "C03511",
+    "C03512",
+    "C03515",
+    "C03516",
+    "C03519",
+    "C03520",
+    "C03523",
+    "C03526",
+    "C03529",
+    "C03530",
+    "C03535",
+    "C03536",
+    "C03538",
+    "C03541",
+    "C03544",
+    "C03545",
+    "C03549",
+    "C03553",
+    "C03560",
+    "C03565",
+    "C03567",
+    "C03585"
+   ]
+  },
+  {
+   "id": "r65",
+   "code": "C037",
+   "label": "C037-EXTRAORDINARY RECEIPTS",
+   "level": 3,
+   "source_row": 65,
+   "type": "detail",
+   "patterns": [
+    "C03701",
+    "C03702",
+    "C03706",
+    "C03707",
+    "C03710",
+    "C03720",
+    "C03721",
+    "C03725",
+    "C03743",
+    "C03709"
+   ]
+  },
+  {
+   "id": "r66",
+   "code": "C038",
+   "label": "C038-OTHERS",
+   "level": 3,
+   "source_row": 66,
+   "type": "detail",
+   "patterns": [
+    "C03801",
+    "C03802",
+    "C03803",
+    "C03804",
+    "C03805",
+    "C03806",
+    "C03807",
+    "C03808",
+    "C0380A",
+    "C0380J",
+    "C03810",
+    "C03811",
+    "C03813",
+    "C03815",
+    "C03816",
+    "C03818",
+    "C03819",
+    "C03820",
+    "C03821",
+    "C03823",
+    "C03824",
+    "C03825",
+    "C03826",
+    "C03828",
+    "C03829",
+    "C03830",
+    "C03832",
+    "C03834",
+    "C03835",
+    "C03836",
+    "C03837",
+    "C03838",
+    "C03839",
+    "C03841",
+    "C03842",
+    "C03844",
+    "C03849",
+    "C03850",
+    "C03852",
+    "C03853",
+    "C03855",
+    "C03859",
+    "C03860",
+    "C03863",
+    "C03870",
+    "C03871",
+    "C03875",
+    "C03877",
+    "C03878",
+    "C03880",
+    "C03881",
+    "C03885",
+    "C03886",
+    "C03887",
+    "C03888",
+    "C03891",
+    "C03809",
+    "C03822",
+    "C03827",
+    "C03831",
+    "C03840",
+    "C03851",
+    "C03857",
+    "C03867",
+    "C03882"
+   ]
+  },
+  {
+   "id": "r67",
+   "code": "C039",
+   "label": "C039-DEVELOPMENT SURCHARGE AND ROYALTIES",
+   "level": 3,
+   "source_row": 67,
+   "type": "detail",
+   "patterns": [
+    "C03909"
+   ]
+  },
+  {
+   "id": "r68",
+   "code": "",
+   "label": "CAPITAL AND OTHER RECEIPTS",
+   "level": 1,
+   "source_row": 68,
+   "type": "total",
+   "children": [
+    "r69",
+    "r70",
+    "r71",
+    "r72",
+    "r73",
+    "r74",
+    "r75",
+    "r77"
+   ]
+  },
+  {
+   "id": "r69",
+   "code": "C036",
+   "label": "C036-Foreign Grants- Non- Development Grants from Foreign Governments",
+   "level": 2,
+   "source_row": 69,
+   "type": "detail",
+   "patterns": [
+    "C03601",
+    "C03603",
+    "C03609"
+   ]
+  },
+  {
+   "id": "r70",
+   "code": "E013",
+   "label": "E013-PROVINCIAL INVESTMENT",
+   "level": 2,
+   "source_row": 70,
+   "type": "detail",
+   "patterns": [
+    "E013",
+    "E011"
+   ]
+  },
+  {
+   "id": "r71",
+   "code": "E021",
+   "label": "E021- FROM OTHERS",
+   "level": 2,
+   "source_row": 71,
+   "type": "detail",
+   "patterns": [
+    "E021"
+   ]
+  },
+  {
+   "id": "r72",
+   "code": "E022",
+   "label": "E022-FROM DISTRICT GOVERNMENT /TMAS",
+   "level": 2,
+   "source_row": 72,
+   "type": "detail",
+   "patterns": [
+    "E02201"
+   ]
+  },
+  {
+   "id": "r73",
+   "code": "E024",
+   "label": "E024-FROM NON FINANCIAL INSTITUTIONS",
+   "level": 2,
+   "source_row": 73,
+   "type": "detail",
+   "patterns": [
+    "E02401"
+   ]
+  },
+  {
+   "id": "r74",
+   "code": "E025",
+   "label": "E025-FROM GOVERNMENT SERVANTS",
+   "level": 2,
+   "source_row": 74,
+   "type": "detail",
+   "patterns": [
+    "E02501",
+    "E02502",
+    "E02503"
+   ]
+  },
+  {
+   "id": "r75",
+   "code": "E031",
+   "label": "E031-FROM OTHERS",
+   "level": 2,
+   "source_row": 75,
+   "type": "detail",
+   "patterns": [
+    "E02701"
+   ],
+   "note": "Label kept exactly as in the source workbook; the line sums E02701 (domestic loans)."
+  },
+  {
+   "id": "r77",
+   "code": "E033",
+   "label": "E033-PERMANENT DEBT - FOREIGN",
+   "level": 2,
+   "source_row": 77,
+   "type": "detail",
+   "patterns": [
+    "E03301"
+   ]
+  }
+ ]
+}

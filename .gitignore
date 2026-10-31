@@ -1,0 +1,7 @@
+resources/.app_state.json
+resources/logs/
+resources/outputs/
+resources/mapping/history/
+__pycache__/
+resources/table2.db
+resources/other_uploads/
